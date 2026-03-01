@@ -20,7 +20,7 @@ header input {
   width: 250px;
 }
 
-header button {
+header #searchBtn {
   padding: 8px 20px;
   background: #e94560;
   color: white;
@@ -96,8 +96,49 @@ main {
   padding: 50px;
   font-size: 20px;
 }
-
 @media (max-width: 600px) {
   header { flex-wrap: wrap; }
-  header input { width: 100%; }
+  header h1 { flex: 1; order: 1; }
+  #hamburger { display: block; order: 2; }
+  header input { width: 75%; order: 3; }
+  #searchBtn { order: 3; width: 20%; padding: 8px 5px; }
+}
+@media (min-width: 601px) {
+  #hamburger { display: none; }
+}
+
+#hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  #hamburger { display: block; }
+  #nav { display: none; flex-direction: column; }
+  #nav.open { display: flex; }
+}
+
+#pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.page-btn {
+  padding: 8px 12px;
+  border: 2px solid #1a1a2e;
+  background: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.page-btn.active {
+  background: #1a1a2e;
+  color: white;
 }

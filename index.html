@@ -11,9 +11,10 @@
     <h1>📰 News Times</h1>
     <input type="text" id="searchInput" placeholder="키워드 검색...">
     <button id="searchBtn">검색</button>
+    <button id="hamburger">☰</button>
   </header>
 
-  <nav>
+  <nav id="nav">
     <button class="category-btn active" data-category="general">전체</button>
     <button class="category-btn" data-category="business">비즈니스</button>
     <button class="category-btn" data-category="entertainment">엔터</button>
@@ -23,6 +24,7 @@
   </nav>
 
   <main id="newsContainer"></main>
+  <div id="pagination"></div>
 
   <script src="app.js"></script>
 </body>
